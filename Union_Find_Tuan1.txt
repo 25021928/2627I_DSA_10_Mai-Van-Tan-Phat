@@ -1,0 +1,8 @@
+Bài 4:
+	- Vì weighted quick union hạn chế hiện tượng các thành phần liên thông có độ cao quá sâu, nên parent[8ư có thể chỉ nhận những giá trị sau: 0, 4, 8.
+
+Bài 5:
+	- Mảng đã cho không thể là biểu diễn parent-link của 1 cấu trúc weighted quick union.
+	- Giải thích: theo mảng thể hiện có root là 5, trước khi hoàn thành 1 đồ thị kiên thông hoàn chỉnh cần tách ra thành 2 đồ thị liên thông con theo 2 trường hợp:
+		+ Hai thành phần có root là 0 và 5: ta có thể thấy đồ thị root 0 có size lớn hơn đồ thị root 5, vì vậy 5 không thể là root của đồ thị cuối cùng.
+		+ Hai thành phần có root là 5 và 7: ta hoàn toàn có thể để root là 5 vì size lớn hơn, nhưng tiếp tục xét ta có thể tách đồ thị root 5 thành root 5 và root 0, ở đây đồ thị root 0 có size lớn hơ nên 5 lại không thể trở thành root.
